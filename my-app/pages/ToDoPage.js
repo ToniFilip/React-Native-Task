@@ -1,14 +1,5 @@
-import { Box } from "@react-native-material/core";
 import { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  ScrollView,
-  Switch,
-  Button,
-  TextInput,
-} from "react-native";
+import { ScrollView, Button, TextInput } from "react-native";
 import { styles, stylesText } from "../styles";
 import { ToDo } from "./ToDo";
 
