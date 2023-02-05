@@ -1,18 +1,10 @@
 import { StyleSheet, View, Text, Switch } from "react-native";
 import React, { useState } from "react";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+import { styles } from "../styles";
 
 const TextSwitch = ({ isEnabled, setIsEnabled, text }) => (
-  <View>
-    <Text>{text}</Text>
+  <View style={styles.container}>
+    <Text style={styles.heading}>{text}</Text>
     <Switch onValueChange={setIsEnabled} value={isEnabled} />
   </View>
 );
@@ -26,7 +18,7 @@ export default function Settings() {
     setSwitch((previousState) => !previousState);
 
   return (
-    <View>
+    <View style={styles.container}>
       <TextSwitch
         isEnabled={isSMSEnabled}
         setIsEnabled={() => toggleSwitch(setIsSMSEnabled)}

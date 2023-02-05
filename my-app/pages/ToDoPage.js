@@ -1,3 +1,4 @@
+import { Box } from "@react-native-material/core";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -8,27 +9,8 @@ import {
   Button,
   TextInput,
 } from "react-native";
-
-const styles = StyleSheet.create({
-  toDo: {
-    flexDirection: "row",
-    display: "flex",
-  },
-});
-
-const ToDo = ({ text }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  return (
-    <View>
-      <Text>{text}</Text>
-      <Switch
-        onValueChange={() => setIsEnabled((previousState) => !previousState)}
-        value={isEnabled}
-      />
-      <Button title="Delete" />
-    </View>
-  );
-};
+import { styles, stylesText } from "../styles";
+import { ToDo } from "./ToDo";
 
 export default function ToDoPage() {
   const [text, setText] = useState("");
@@ -39,7 +21,7 @@ export default function ToDoPage() {
   }, [toDoList]);
   return (
     <ScrollView>
-      <TextInput onChangeText={setText} value={text} />
+      <TextInput style={stylesText.input} onChangeText={setText} value={text} />
       <Button
         title="Submit"
         onPress={() => {
