@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, Switch } from "react-native";
 import React, { useState } from "react";
 import { styles } from "../styles";
+import { useDispatch, useSelector } from "react-redux";
 
 const TextSwitch = ({ isEnabled, setIsEnabled, text }) => (
   <View style={styles.container}>
