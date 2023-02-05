@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import Settings from "./pages/Settings";

@@ -14,7 +14,7 @@ export default function ToDoPage() {
     <ScrollView>
       <TextInput style={stylesText.input} onChangeText={setText} value={text} />
       <Button
-        title="Submit"
+        title="Add ToDo"
         onPress={() => {
           if (text && text.length) {
             toDoList.push(text);
